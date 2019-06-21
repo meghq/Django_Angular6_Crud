@@ -1,0 +1,36 @@
+.header{
+	background-color: darkblue ;
+	height: 75px;
+	width: 103%;
+	position: fixed;
+    z-index: 20;
+}
+.r{
+	float:left;
+	border-radius:50px;
+}
+.align{
+	margin-right:30px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background-color:blue;
+	color:white;
+	/*text-align:center;*/
+	z-index:20;
+	height:40px;
+}
+.r4{
+	text-align: center;
+	color:white;
+}
+.display,ul,li{
+	display: inline-block;
+	padding-right:170px;
+}

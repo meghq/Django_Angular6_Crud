@@ -1,0 +1,72 @@
+<div class="col-md-12 col-lg-12 col-sm-12 backgroundclr1">
+  <div class="row">
+<div claas="col-md-12 col-lg-12 col-sm-12  ">
+<div class="col-md-offset-3 col-md-6  addtbl log ">
+  <form [formGroup]="firstFormGroup" (ngSubmit)="onClick(practice);">
+      <div class="form-group">
+        <label>Firstname</label>
+        <input type="text" placeholder="enter your firstname"  formControlName="firstName" [(ngModel)] ="practice.firstname" (keypress)="keyPress1($event)" name="firstName" class="form-control">
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+          <div *ngIf="f.firstName.errors.required" class="color" >firstname is required</div>
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label>Lastname</label>
+        <input type="text" placeholder="enter your lastname"   formControlName="lastName" [(ngModel)] ="practice.lastname"  class="form-control" (keypress)="keyPress1($event)">
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+          <div *ngIf="f.lastName.errors.required" class="color">lastname is required</div>
+          </div>
+      </div>      
+     
+     <div class="form-group">
+        <label>email</label>
+        <input type="text" placeholder="enter your email"  formControlName="Email_address" [(ngModel)]="practice.email" [ngClass]="{ 'is-invalid': submitted && f.Email_address.errors }" class="form-control">
+        <div *ngIf="submitted && f.Email_address.errors" class="invalid-feedback">
+          <div *ngIf="f.Email_address.errors.required" class="color">email is required</div>
+          </div>
+      </div> 
+     
+      <div class="form-group">
+        <label>password</label>
+        <input type="text" placeholder="enter your password" formControlName="passw" [(ngModel)]="practice.password" [ngClass]="{ 'is-invalid': submitted && f.passw.errors }"  class="form-control">
+        <div *ngIf="submitted && f.passw.errors" class="invalid-feedback">
+          <div *ngIf="f.passw.errors.required" class="color">password is required</div>
+          </div>
+      </div>
+      <div class="form-group">
+        <label>mobile number</label>
+        <input type="text" placeholder="enter your mobilenumber" formControlName="mobile_no" [(ngModel)]="practice.mob_number" minlength="10" maxlength="10" (keypress)="keyPress($event)" [ngClass]="{ 'is-invalid': submitted && f.mobile_no.errors }"  class="form-control">
+        <div *ngIf="submitted && f.mobile_no.errors" class="invalid-feedback">
+        <div *ngIf="f.mobile_no.errors.required" class="color">mobilenumber is required</div>
+          </div>
+      </div>
+     <!--  <div class="form-group">
+        <label>gender</label>
+    <label class="form-check-inline">
+    <input class="form-check-input" type="radio" name="mode" value="male" 
+        [(ngModel)]="practice.gender" formControlName="genders">male
+    </label>
+    <label class="form-check-inline">
+    <input class="form-check-input" type="radio" name="mode" value="female"
+        [(ngModel)]="practice.gender" formControlName="genders">female
+    </label>
+    </div> -->   
+  <button class="btn btn-primary" type="submit">submit</button>
+  <!-- <button class="btn btn-primary" (click)="onClick1()" >delete</button> -->
+</form>
+</div>
+
+
+<div class="col-md-6">
+ <div class="col-md-6">
+  <div class="form-group">
+        <label>firstname</label>
+        <input type="text" placeholder="enter your firstname" [(ngModel)]="practice1.firstname" class="form-control">
+  </div>      
+  <button class="btn btn-primary" (click)="onClick1(practice1)" >delete</button>
+</div>
+</div>
+</div>
+</div>
+</div>

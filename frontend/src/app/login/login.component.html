@@ -1,0 +1,58 @@
+<div class="col-md-12 col-lg-12 col-sm-12 backgroundclr1">
+  <div class="row">
+<div claas="col-md-12 col-lg-12 col-sm-12  ">
+<div class="col-md-8 col-md-offset-2 tbl">
+  <h3>GTPL EMPLOYEES DATA</h3>
+  <div>
+    <label>search </label>
+    <select [(ngModel)]="itemsinpage">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+  </div>
+    <input type="text" [(ngModel)]="firstname" (input)="search()" placeholder="search name" class="src">
+    <table class="table table-bordered">
+      <thead class="thead-dark r4">
+        <tr>
+         <th>id</th>
+          <th>firstname</th>
+          <th>lastname</th>
+          <th>email</th>
+          <th>password</th>
+          <th>mobilenumber</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody class="color">
+        <tr *ngFor = "let customer of allCustomersData| paginate: { itemsPerPage: itemsinpage, currentPage: p }">
+          <td><input type="text" placeholder="enter your id" [(ngModel)]="customer.id" [readonly]="status3" class="form-control "></td>
+          <td><input type="text" placeholder="enter your firstname" [(ngModel)]="customer.firstname" [readonly]="status3" class="form-control "></td>
+          <td><input type="text" [readonly]="status3" placeholder="enter your lastname" [(ngModel)]="customer.lastname" class="form-control "></td>
+          <td><input type="text" [readonly]="status3" placeholder="enter your email" [(ngModel)]="customer.email" class="form-control "></td>
+          <td><input type="text" [readonly]="status3" placeholder="enter your password" [(ngModel)]="customer.password" class="form-control "></td>
+          <td><input type="number" [readonly]="status3" placeholder="enter your number" [(ngModel)]="customer.mob_number" class="form-control "></td>
+         
+          <td>
+            <button class="btn btn-primary" *ngIf="status1" (click)="editCustomer()" >Edit</button>
+            <button class="btn btn-danger" *ngIf="status1" (click)="deleteCustomer(customer)" >delete</button>
+            <button class="btn btn-warning" *ngIf="status2" (click)="cancel()">Cancel</button>
+            <button class="btn btn-success editbutton" *ngIf="status2" (click)="save(customer)">Save</button>
+            <!-- <button class="btn btn-danger" (click)="delcustom()">Del</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+  </div>
+</div>
+</div>
+</div>
+
+  
+
+
+
+
+

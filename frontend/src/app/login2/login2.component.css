@@ -1,0 +1,74 @@
+.backgroundclr1{
+	background: url('../../assets/img/nature.jpeg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	width:100%;
+	color: black;  
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	position: fixed;
+	overflow-y: scroll;
+
+
+}
+.backgroundclr1::-webkit-scrollbar { 
+    display: none; 
+}
+/*.content{
+	position:absolute;
+    top: 50px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow-y:scroll;
+}
+*/
+
+
+/*::-webkit-scrollbar {
+  display: none;
+}*/
+
+.addtbl{
+	text-align: center;
+	margin-top: 88px;
+}
+label{
+	color: white;
+}
+.log{
+
+border: 1px solid;
+color: white;
+background-color:rgba(255, 0, 0, 0.2);
+border-radius: 32px;
+margin-top: 100px;
+padding-top: 54px;
+padding-right: 32px;
+padding-bottom: 66px;
+padding-left: 46px;
+box-shadow: 5px 10px #888888;
+
+
+}
+.header{
+	background-color: lightskyblue;
+	height: 78px;
+	width: 103%;
+}
+.r{
+	float:right;
+	
+}
+.tbl{
+	margin-top: 10%;
+	background-color: lightblue;
+}
+.color{
+	color:red;
+}
